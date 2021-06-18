@@ -40,3 +40,7 @@ body {
 .hidden {
     display: none;
 }
+
+.paddingBtm { 
+    padding-top: 10px;
+}

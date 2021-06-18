@@ -62,8 +62,13 @@ const startGame = () => {
             const wps = cursorIndex / seconds; 
             const wpm = parseInt(wps * 60.0 / 5.0); /* WPM - total amount of characters in the correctly typed words (this includes spaces) divided by 5 and normalised to 60 seconds. */
             document.getElementById('statsDivision').innerText = `Words Per Min = ${wpm}`;
+            statsDivision.classList.add('paddingBtm');
+
             document.removeEventListener('keypress', keylistener);
             startGameButton.classList.remove("hidden");
+
+            /* Change the button innertext and ask the user if he/she wants to try typing again */
+            document.getElementById('start-game').innerText = 'Try Again?';
             return;
         
         }
