@@ -1,7 +1,29 @@
+body {
+    text-align: center;
+}
+
 .cursor { 
     background-color: chartreuse;
 }
 
 .done { 
     color: dimgray;
+}
+
+#start-game {
+    margin: 0 auto;
+}
+
+#statsDivision { 
+    margin: 0 auto;
+    width: 300px;
+}
+
+#typingDivision { 
+    margin: 0 auto;
+    width: 300px;
+}
+
+.hidden {
+    display: none;
 }
