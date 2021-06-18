@@ -4,9 +4,9 @@ const statsDivision = document.getElementById("statsDivision");
 const startGameButton = document.getElementById("start-game");
 
 const randomArrText = [
-    'Pass substantial servant rude', // obtainable whirl strong ready word blade analyze communicate',
-    'Sun cute belief book somber', //examine level pan eggnog delicate whirl stereotyped',
-    'Ambitious jaded cowardly obese' // whole aloof greedy tame quick disagreeable glistening seemly'
+    'Pass substantial servant rude obtainable whirl strong ready word blade analyze communicate',
+    'Sun cute belief book somber examine level pan eggnog delicate whirl stereotyped',
+    'Ambitious jaded cowardly obese whole aloof greedy tame quick disagreeable glistening seemly'
 ];
 
 const startGame = () => {
@@ -60,7 +60,7 @@ const startGame = () => {
             // const minutes = delta / 60; 
             // const numberOfWords = randomText.split(" ").length;
             const wps = cursorIndex / seconds; 
-            const wpm = parseInt(wps * 60.0 / 5.0);
+            const wpm = parseInt(wps * 60.0 / 5.0); /* WPM - total amount of characters in the correctly typed words (this includes spaces) divided by 5 and normalised to 60 seconds. */
             document.getElementById('statsDivision').innerText = `Words Per Min = ${wpm}`;
             document.removeEventListener('keypress', keylistener);
             startGameButton.classList.remove("hidden");
