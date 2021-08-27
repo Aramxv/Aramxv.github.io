@@ -1,26 +1,57 @@
 body {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    margin-top: 50%;
-    margin-bottom: 50%;
     font-family: 'Source Code Pro', monospace;
+    background-color: #343641;
+}
+
+.notice-board {
+    background-color: #FF2C84;
+    color: #FFFFFF;
+    margin: 0 auto;
+    border: 0;
+    padding: 10px;
+}
+.close-button {
+    color: #FFFFFF;
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-button:hover {
+    color:#343641;
+}
+
+.mother-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 28px;
+    margin: 0 auto;
+
+    width: 1000px;
+    height: 700px;
 }
 
 .cursor { 
-    background-color: chartreuse;
+    background-color: #FF2C84;
+    opacity: 50%;
 }
 
 .done { 
-    color: dimgray;
+    color: #FF2C84;
 }
 
 #start-game {
     /* Button Appearance */
     font-family: 'Source Code Pro', monospace;
-    font-size: 28px;
+    font-size: 48px;
+    color: #C8C8C8;
     padding: 10px;
     border: 0 ;
 
@@ -28,19 +59,71 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+
+    background: transparent;
 }
 
-#statsDivision #typingDivision { 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#statsDivision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#typingDivision { 
+    color: dimgray;
+}
+
+.fixed-footer {
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    background-color: #343641;
+    color: #FFFFFF;
     text-align: center;
+}
+
+.footer-icon-small { 
+    display: inline-block;
+    width: 12px;
+    margin-right: 8px;
+}
+
+.footer-text {
+    display: inline-block;
+}
+
+.not-underline { 
+    display: inline-block;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.margin-right-5 {
+    margin-right: 5px;
 }
 
 .hidden {
     display: none;
 }
 
+.block {
+    display: block;
+}
+
 .paddingBtm { 
     padding-top: 10px;
 }
+
+.typed { 
+    color: dimgray;
+}
+
+.japanese {
+    color: transparent !important; 
+    text-shadow: 0 0 8px #000;
+}
+
+

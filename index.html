@@ -10,10 +10,37 @@
     <title>Practice typing</title>
 </head>
 <body>
-    <div id="statsDivision"></div>
-    <div id="typingDivision"></div>
-    <button id="start-game" onclick="startGame();">Type Now</button>
 
+    <!-- Notice Board -->
+    <div class="notice-board">
+        <span class="close-button" onclick="this.parentElement.style.display='none';">&times;</span>
+        Migrating to mkbdtypist.herokuapp.com is still working in progress, please bear with me.
+    </div>
+
+    <!-- Content -->
+    <div class="mother-container">
+        <div id="statsDivision"></div>
+        <div id="typingDivision"></div>
+        <button id="start-game" onclick="startGame();">type now</button>
+    </div> 
+
+    <!-- Fixed Footer -->
+    <div class="fixed-footer">
+        <a class="not-underline margin-right-5" href="#">
+            <p class="footer-text"><span><img class="footer-icon-small" src="/assets/footer-icons/donate.png" alt="donate"></span></p>Support me</p>
+        </a>
+        <a class="not-underline margin-right-5" href="#">
+            <p class="footer-text"><span><img class="footer-icon-small" src="/assets/footer-icons/github.png" alt="github"></span></p>Github</p>
+        </a>
+        <a class="not-underline margin-right-5" href="#">
+            <p class="footer-text"><span><img class="footer-icon-small" src="/assets/footer-icons/theme.png" alt="github"></span></p>Change theme</p>
+        </a>
+        <a class="not-underline margin-right-5" href="#">
+            <p class="footer-text"><span><img class="footer-icon-small" src="/assets/footer-icons/version.png" alt="github"></span></p>v1.0.0</p>
+        </a>
+    </div>
+   
+   
     <script src="js/index.js"></script>
 </body>
 </html>
