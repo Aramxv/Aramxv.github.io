@@ -4,9 +4,10 @@ const statsDivision = document.getElementById("statsDivision");
 const startGameButton = document.getElementById("start-game");
 
 const randomArrText = [
-    'Pass substantial servant rude obtainable whirl strong ready word blade analyze communicate',
-    'Sun cute belief book somber examine level pan eggnog delicate whirl stereotyped',
-    'Ambitious jaded cowardly obese whole aloof greedy tame quick disagreeable glistening seemly'
+    'pass substantial' , // servant rude obtainable whirl strong ready word blade analyze communicate ablaze cave throat cloth boring imprison squalid extend responsible behold hurt knock meal unkempt',
+    'sun cute belief', // book somber examine level pan eggnog delicate whirl stereotyped ambitious jaded cowardly obese whole aloof greedy tame quick disagreeable glistening seemly',
+    'ablaze cave', // throat cloth boring imprison squalid extend responsible behold hurt knock meal unkempt ambitious jaded cowardly obese whole aloof greedy tame quick disagreeable glistening seemly',
+    'obtainable' // communicate substantial servant rude whirl strong ready word blade analyze ablaze cave throat cloth boring ablaze cave throat cloth boring imprison squalid extend responsiblebehold hurt knock meal unkempt'
 ];
 
 const startGame = () => {
@@ -40,6 +41,12 @@ const startGame = () => {
     /* Used keypress instead of keydown for counting errors */
     /* Check if the character typed by the user, matches the character in random Text that wraps in a span */
 
+    const retry_Imager = () => {
+        const img = new Image();
+        img.src = '/assets/general_icons/retry.png';
+        document.getElementById('body').appendChild(retry_Imager);
+    }
+
     const keylistener = document.addEventListener("keypress", ({ key }) => {
         if (!startTime) {
             startTime = new Date();
@@ -61,17 +68,21 @@ const startGame = () => {
             // const numberOfWords = randomText.split(" ").length;
             const wps = cursorIndex / seconds; 
             const wpm = parseInt(wps * 60.0 / 5.0); /* WPM - total amount of characters in the correctly typed words (this includes spaces) divided by 5 and normalised to 60 seconds. */
+            
             document.getElementById('statsDivision').innerText = `Words Per Min = ${wpm}`;
             statsDivision.classList.add('paddingBtm');
 
             document.removeEventListener('keypress', keylistener);
             startGameButton.classList.remove("hidden");
+            typingDivision.classList.add("typed");
 
             /* Change the button innertext and ask the user if he/she wants to try typing again */
-            document.getElementById('start-game').innerText = 'Try Again?';
+            document.getElementById('start-game').innerHTML = 'Try Again?';
+            document.getElementById('start-game').img.src = '/assets/general_icons/retry.png';
+            
             return;
-        
         }
         cursorCharacter.classList.add("cursor");
+        typingDivision.classList.remove("japanese");
     });
 };
